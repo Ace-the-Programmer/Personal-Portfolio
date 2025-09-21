@@ -1,20 +1,93 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="home-page">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <img src="assets/profile.jpg" alt="AcE" class="profile-pic" />
+    <h1>I’m <span class="highlight">AcE</span></h1>
+    <h2>Gamer & Programmer</h2>
+    <p class="tagline">Building systems, grinding games, and creating cool projects.</p>
+    <a href="#projects" class="scroll-btn">↓ See My Work</a>
+  </section>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h2>About Me</h2>
+    <p>
+      I’m AcE, a gamer and programmer who loves building systems, modding keyboards,
+      and learning new tech. When I’m not coding, you’ll find me in Dota 2 or creating
+      ASMR/automation projects.
+    </p>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills" id="skills">
+    <h2>Skills & Tools</h2>
+    <ul>
+      <li><i class="fab fa-java"></i> Java</li>
+      <li><i class="fab fa-angular"></i> Angular</li>
+      <li><i class="fas fa-database"></i> SQL</li>
+      <li><i class="fab fa-github"></i> GitHub</li>
+      <li><i class="fas fa-code"></i> NetBeans</li>
+      <li><i class="fas fa-paint-brush"></i> Canva</li>
+    </ul>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+
+      <!-- Project Card -->
+      <div class="project-card">
+        <img [src]="project1Image || 'assets/project1.jpg'" alt="Agriculture System" />
+        <h3>Agriculture System</h3>
+        <p>Java + SQL based farm management system.</p>
+        <input type="file" (change)="onImageSelect($event, 'project1')" hidden #fileInput1>
+        <button (click)="fileInput1.click()">Change Image</button>
+      </div>
+
+      <!-- Project Card -->
+      <div class="project-card">
+        <img [src]="project2Image || 'assets/project2.jpg'" alt="Health Tracker" />
+        <h3>Health Tracker</h3>
+        <p>Java NetBeans GUI-based health tracker app.</p>
+        <input type="file" (change)="onImageSelect($event, 'project2')" hidden #fileInput2>
+        <button (click)="fileInput2.click()">Change Image</button>
+      </div>
+
+      <!-- Project Card -->
+      <div class="project-card">
+        <img [src]="project3Image || 'assets/project3.jpg'" alt="Car Dashboard" />
+        <h3>Car Dashboard</h3>
+        <p>Angular UI dashboard with ranges and controls.</p>
+        <input type="file" (change)="onImageSelect($event, 'project3')" hidden #fileInput3>
+        <button (click)="fileInput3.click()">Change Image</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section class="education" id="education">
+    <h2>Education</h2>
+    <p>Bachelor of Science in Information Technology – Ongoing</p>
+  </section>
+
+  <!-- Hobbies Section -->
+  <section class="hobbies" id="hobbies">
+    <h2>Hobbies</h2>
+    <ul>
+      <li><i class="fas fa-gamepad"></i> Playing Online Games (Dota 2)</li>
+      <li><i class="fas fa-keyboard"></i> Keyboard Modding</li>
+      <li><i class="fas fa-headphones"></i> ASMR & Automation</li>
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:your@email.com">your@email.com</a></p>
+    <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+  </section>
+
 </ion-content>

@@ -1,30 +1,33 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
-    "forceConsistentCasingInFileNames": true,
+    "target": "ES2022",
+    "module": "ESNext",
+    "lib": [
+      "es2022",
+      "dom"
+    ],
+    "allowJs": true,
+    "checkJs": false,
+    "skipLibCheck": true,
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "strict": true,
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
+    "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "sourceMap": true,
-    "declaration": false,
-    "experimentalDecorators": true,
     "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "importHelpers": true,
-    "target": "es2022",
-    "module": "es2020",
-    "lib": ["es2018", "dom"],
-    "useDefineForClassFields": false
+    "downlevelIteration": true,
+    "useDefineForClassFields": false,
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false
   },
   "angularCompilerOptions": {
-    "enableI18nLegacyMessageIdFormat": false,
-    "strictInjectionParameters": true,
-    "strictInputAccessModifiers": true,
+    "enableIvy": true,
     "strictTemplates": true
   }
 }
